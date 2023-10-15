@@ -22,11 +22,11 @@ class Meta:
 
 
 class Topic(models.Model):
-    title = models.CharField(max_length=255, null=False, blank=False)
+    name = models.CharField(max_length=255, null=False, blank=False)
     slug = models.TextField()
 
     def __str__(self):
-        return self.title
+        return self.name
 
 
 class Comment(models.Model):

@@ -11,7 +11,7 @@ class PostAdmin(admin.ModelAdmin):
 
 
 class TopicAdmin(admin.ModelAdmin):
-    list_display = ('title','slug',)
+    list_display = ('name','slug',)
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('post', 'created', 'updated',)
@@ -19,5 +19,5 @@ class CommentAdmin(admin.ModelAdmin):
 
 
 admin.site.register(models.Post,PostAdmin)
-admin.site.register(models.Topic,TopicAdmin)
+admin.site.register(models.Topic, TopicAdmin)
 admin.site.register(models.Comment,CommentAdmin)
