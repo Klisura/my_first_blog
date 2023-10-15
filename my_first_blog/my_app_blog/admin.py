@@ -8,14 +8,17 @@ from . import models
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title','created','updated',)
     list_filter = ('created',)
+    search_fields = ('title',)
 
 
 class TopicAdmin(admin.ModelAdmin):
     list_display = ('name','slug',)
+    search_fields = ('name',)
 
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('post', 'created', 'updated',)
     list_filter = ('created',)
+
 
 
 admin.site.register(models.Post,PostAdmin)
