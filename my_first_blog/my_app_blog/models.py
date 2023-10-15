@@ -19,3 +19,23 @@ class Post(models.Model):
 
 class Meta:
     ordering = ['- created']
+
+
+class Topic(models.Model):
+    title = models.CharField(max_length=255, null=False, blank=False)
+    slug = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, related_name="comments", on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    text = models.TextField()
+    created = models.DateTimeField(auto_now_add= True)
+    updated = models.DateTimeField(auto_now=True)
+    email = models.EmailField(max_length=70,blank=True)
+
+    def __str__(self):
+        return self.name
