@@ -8,7 +8,7 @@ from . import models
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title','created','updated',)
     list_filter = ('created',)
-    search_fields = ('title',)
+    search_fields = ('title','author',)
 
 
 class TopicAdmin(admin.ModelAdmin):
