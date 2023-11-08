@@ -20,12 +20,12 @@ from django.urls import path
 
 from my_app_blog import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('about/',views.about, name='about'),
+    path('about/', views.AboutView.as_view(), name='about'),
 
-    path('posts/', views.PostList.as_view(), name='PostList'),
 
 
 

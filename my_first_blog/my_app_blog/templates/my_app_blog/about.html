@@ -1,14 +1,11 @@
-{% load static %} <link rel="stylesheet" href="{% static "my_app_blog/base.css" %}">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Milan</title>
-</head>
-<body><h1>About me</h1>
-<h2>My goals for the year:</h2>
-   <ol> To learn Django.</ol>
-   <ol> To improve Python skills.</ol>
+{% extends 'my_app_blog/base.html' %}
 
-</body>
-</html>
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1>About</h1>
+
+<p>{% lorem %}</p>
+{% endblock %}
+
+

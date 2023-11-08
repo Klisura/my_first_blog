@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>My Blog – {% block page_title %}An awesome blog{% endblock %}</title>
+  <title>My Blog – {% block title %}An awesome blog{% endblock %}</title>
 
 </head>
 
@@ -17,13 +17,24 @@
   <!-- Top navigation -->
   <nav id="top-nav">
     <ul>
+
       <li><a href="{% url "home" %}">Home</a></li>
       <li><a href="{% url "about" %}">About</a></li>
-      <li><a href="{% url "PostList" %}">Posts</a></li>
+      <li><a href="#">Posts</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
+
+{% block content %}
+
+{% endblock %}
+
+<!-- The footer -->
+  <footer id="site-footer">
+    <!-- Print copyright with the current year -->
+    Copyright &copy;{% now 'Y' %}
+  </footer>
 
 </body>
 </html>
