@@ -1,0 +1,18 @@
+{% extends "my_app_blog/base.html" %}
+
+{% block title %}Topic{% endblock %}
+
+{% block content %}
+<section class="latest-article-preview">
+
+{% for topic in topics %}
+<article>
+  <h2>{{ topic.name }}</h2>
+    {{ topic.slug|linebreaks }}
+
+
+</article>
+{% endfor %}
+
+</section>
+{% endblock %}

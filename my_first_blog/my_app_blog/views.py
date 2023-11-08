@@ -23,3 +23,8 @@ def home(request):
 class ListView(View):
     def get (self,request):
         return render(request, 'my_app_blog/post_list.html')
+
+class TopicView(View):
+    def get (self,request):
+        return render(request, 'my_app_blog/topic.html')
+

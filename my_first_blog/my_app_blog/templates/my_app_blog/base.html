@@ -35,8 +35,7 @@
 </main>
 
  <section id="topic_list">
-  <h3>Topics</h3>
-  <ul>
+  <a href="{% url "topic" %}"><h3>Topics</h3></a>
     {% for topic in topics %}
       <li>{{ topic.name }}</li>
     {% endfor %}
