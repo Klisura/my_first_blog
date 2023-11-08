@@ -20,21 +20,37 @@
 
       <li><a href="{% url "home" %}">Home</a></li>
       <li><a href="{% url "about" %}">About</a></li>
-      <li><a href="#">Posts</a></li>
+      <li><a href="{% url "post_list" %}">Post</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 
+<main id="main-content">
+  <div>
+    {% block content %}
 
-{% block content %}
+     {% endblock %}
+    </div>
+    <aside
+</main>
 
-{% endblock %}
+ <section id="topic_list">
+  <h3>Topics</h3>
+  <ul>
+    {% for topic in topics %}
+      <li>{{ topic.name }}</li>
+    {% endfor %}
+  </ul>
+</section>
 
 <!-- The footer -->
   <footer id="site-footer">
     <!-- Print copyright with the current year -->
     Copyright &copy;{% now 'Y' %}
   </footer>
+
+
+
 
 </body>
 </html>

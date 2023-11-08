@@ -23,8 +23,13 @@ from my_app_blog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', views.base, name='base'),
     path('about/', views.AboutView.as_view(), name='about'),
+    path('home/', views.home, name='home'),
+    path('posts/', views.ListView.as_view(), name='post_list'),
+
+
+
 
 
 
