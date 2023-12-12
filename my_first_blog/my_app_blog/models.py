@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
 class Topic(models.Model):
@@ -14,7 +15,8 @@ STATUS = ((0, "Draft"),(1, "Published"))
 
 class Post(models.Model):
     title = models.CharField(max_length=255, null=False, blank="False")
-    content = models.TextField()
+    header_image = models.ImageField(null=True, blank=True, upload_to="images/")
+    content = RichTextUploadingField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
@@ -45,3 +47,162 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
     def __str__(self):
         return self.name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

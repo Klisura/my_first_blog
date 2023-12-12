@@ -21,6 +21,7 @@
       <li><a href="{% url "home" %}">Home</a></li>
       <li><a href="{% url "about" %}">About</a></li>
       <li><a href="{% url "post_list" %}">Post</a></li>
+        <li><a href="{% url "form" %}">Form</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
@@ -31,8 +32,8 @@
 
      {% endblock %}
     </div>
-    <aside
-</main>
+<aside>
+
 
  <section id="topic_list">
   <a href="{% url "topic" %}"><h3>Topics</h3></a>
@@ -41,11 +42,12 @@
     {% endfor %}
   </ul>
 </section>
-
+    </aside>
+</main>
 <!-- The footer -->
   <footer id="site-footer">
     <!-- Print copyright with the current year -->
-    Copyright &copy;{% now 'Y' %}
+    Copyright &copy;{% now 'Y' %} <strong>Milan Trajkovic</strong>
   </footer>
 
 
